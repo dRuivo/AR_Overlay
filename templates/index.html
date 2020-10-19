@@ -11,6 +11,9 @@
         <a-scene embedded arjs vr-mode-ui="enabled: false" gesture-detector>
             <a-marker preset='hiro'>
                 <a-plane id="bala_back" emitevents="true" foo class="clickable" color="#000"  position='0 0 0' rotation="-90 0 0">
+                    <a-entity visible="false">
+                        <a-plane color="red" position="-2 0 0"></a-plane>
+                    </a-entity>
                     <a-text 
                         id="hello"
                         color="#000"
