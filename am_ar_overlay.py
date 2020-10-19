@@ -18,7 +18,7 @@ def handle_my_custom_event(json):
 def ticker():
     while True:
         sleep(1)
-        print(time())
+        #print(time())
         try:
             socketio.emit('bala', {'time': time()})
         except:

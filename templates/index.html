@@ -8,23 +8,27 @@
     <script src="static/interface.js"></script>
 
     <body style="margin : 0px; overflow: hidden;">
-        <a-scene embedded arjs>
+        <a-scene embedded arjs vr-mode-ui="enabled: false" gesture-detector>
             <a-marker preset='hiro'>
-                <a-plane color="#CCC"  position='0 0 0' rotation="-90 0 0">
+                <a-plane id="bala_back" emitevents="true" foo class="clickable" color="#000"  position='0 0 0' rotation="-90 0 0">
                     <a-text 
-                    color="#000"
-                    position="-0.5 0.2 0.1"
-                    value="Hello Baby"
+                        id="hello"
+                        color="#000"
+                        position="-0.5 0.2 0.1"
+                        value="Hello Baby"
                     ></a-text>
                     <a-text 
-                    id="bala"
-                    color="#000"
-                    position="-0.5 -0.2 0.1"
-                    value="Bala Bala"
+                        id="bala"
+                        color="#000"
+                        position="-0.5 -0.2 0.1"
+                        value="Bala Bala"
                     ></a-text>
                 </a-plane>
             </a-marker>
-            <a-entity camera></a-entity>
+            <a-entity camera>
+                <a-entity cursor raycaster="objects: .clickable"></a-entity>
+                <!--<a-entity raycaster="objects: .clickable"></a-entity>-->
+            </a-entity>
         </a-scene>
     </body>
 </html>
